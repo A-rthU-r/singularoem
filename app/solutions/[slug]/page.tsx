@@ -1,0 +1,32 @@
+import Navbar from "@/components/navbar"
+import HeroSection from "@/components/solutions-hero"
+import FeaturesSection from "@/components/solutions-overview"
+import UseCasesSection from "@/components/solutions-detail"
+import PricingSection from "@/components/pricing-section"
+import TestimonialsSection from "@/components/testimonials-section"
+import Footer from "@/components/footer"
+import Btn from "@/components/btn-download"
+
+
+
+
+
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <Navbar />
+      <main>
+        <HeroSection />
+        <UseCasesSection />
+        <FeaturesSection />
+        <TestimonialsSection />
+        <PricingSection />
+        <div className="fixed bottom-4 right-4">
+     <Btn url="https://codescandy.com/" label="Schedule Meeting" />
+     </div>
+      </main>
+      <Footer />
+    </div>
+  )
+}
