@@ -1,31 +1,52 @@
 import Navbar from "@/components/navbar"
-import HeroSection from "@/components/hero-section"
-import FeaturesSection from "@/components/features-section"
-import UseCasesSection from "@/components/use-cases-section"
-import PricingSection from "@/components/pricing-section"
-import TestimonialsSection from "@/components/testimonials-section"
-import CtaSection from "@/components/cta-section"
+import IndustryPage from "@/components/industry-page"
 import Footer from "@/components/footer"
 import Btn from "@/components/btn-download"
+import { industries } from "@/lib/industries"
+import { notFound } from "next/navigation"
 
+interface IndustryPageParams {
+  params: {
+    slug: string
+  }
+}
 
+export async function generateStaticParams() {
+  return industries.map((industry) => ({
+    slug: industry.slug,
+  }))
+}
 
+export async function generateMetadata({ params }: IndustryPageParams) {
+  const industry = industries.find((i) => i.slug === params.slug)
 
+  if (!industry) {
+    return {
+      title: "Industry Not Found",
+    }
+  }
 
+  return {
+    title: `${industry.title} - Singular`,
+    description: industry.heroDescription,
+  }
+}
 
-export default function Home() {
+export default function Page({ params }: IndustryPageParams) {
+  const industry = industries.find((i) => i.slug === params.slug)
+
+  if (!industry) {
+    notFound()
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <Navbar />
       <main>
-        <HeroSection />
-        <UseCasesSection />
-        <FeaturesSection />
-        <TestimonialsSection />
-        <PricingSection />
+        <IndustryPage industry={industry} />
         <div className="fixed bottom-4 right-4">
-     <Btn url="https://codescandy.com/" label="Schedule Meeting" />
-     </div>
+          <Btn url="https://codescandy.com/" label="Schedule Meeting" />
+        </div>
       </main>
       <Footer />
     </div>

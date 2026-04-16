@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 
-export default function Solution-Hero() {
+export default function SolutionHero() {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
