@@ -7,30 +7,35 @@ import { ChevronDown, Menu, X, Search } from "lucide-react"
 const NAV_LINKS = [
   {
     label: "Our Solutions",
-    href: "#",
+    href: "/solutions/private-5g",
     children: [
-      { label: "IoT Connectivity",  href: "/solutions/iot-connectivity" },
-      { label: "Private 5G",        href: "/solutions/private-5g" },
-      { label: "AI Analytics",      href: "/solutions/ai-analytics" },
-      { label: "Digital Twins",     href: "/solutions/digital-twins" },
-      { label: "Edge Computing",    href: "/solutions/edge-computing" },
+      { label: "IoT Connectivity", href: "/solutions/iot" },
+      { label: "Private 5G", href: "/solutions/private-5g" },
+      { label: "AI Analytics", href: "/solutions/ai-analytics" },
+      { label: "Digital Twins", href: "/solutions/digital-twins" },
+      { label: "Edge Computing", href: "/solutions/edge-computing" },
     ],
   },
   {
     label: "Industries",
-    href: "#",
+    href: "/industries/mining",
     children: [
-      { label: "Mining",             href: "/industries/mining" },
-      { label: "Telecommunications", href: "/industries/telecommunications" },
-      { label: "Manufacturing",      href: "/industries/manufacturing" },
-      { label: "Smart Cities",       href: "/industries/smart-cities" },
-      { label: "Utilities & Energy", href: "/industries/utilities-energy" },
-      { label: "Healthcare",         href: "/industries/healthcare" },
+      { label: "Mining", href: "/industries/mining" },
+      { label: "Telecommunications", href: "/industries/telecom" },
+      { label: "Manufacturing", href: "/industries/manufacturing" },
+      { label: "Smart Cities", href: "/industries/smart-cities" },
+      { label: "Utilities & Energy", href: "/industries/utilities" },
+      { label: "Healthcare", href: "/industries/healthcare" },
     ],
   },
   {
     label: "Insights",
     href: "#insights",
+    children: null,
+  },
+  {
+    label: "Partners",
+    href: "/partners",
     children: null,
   },
   {
@@ -56,7 +61,10 @@ export default function Navbar() {
       <div className="max-w-[1400px] mx-auto px-6 flex items-center justify-between h-16">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center flex-shrink-0 mr-10">
+        <Link
+          href="/"
+          className="flex items-center flex-shrink-0 mr-10"
+        >
           <img
             src="/images/logo.png"
             alt="The Singular"
@@ -86,20 +94,20 @@ export default function Navbar() {
                 )}
               </Link>
 
-              {/* Dropdown */}
-              {link.children && activeDropdown === link.label && (
-                <div className="absolute top-full left-0 w-52 bg-white border border-slate-200 shadow-lg py-2 z-50">
-                  {link.children.map((child) => (
-                    <Link
-                      key={child.label}
-                      href={child.href}
-                      className="block px-5 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#0050A0] transition-colors"
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
+            {/* Dropdown */}
+            {link.children && activeDropdown === link.label && (
+              <div className="absolute top-full left-0 w-52 bg-white border border-slate-200 shadow-lg py-2 z-50">
+                {link.children.map((child) => (
+                  <Link
+                    key={typeof child === "string" ? child : child.label}
+                    href={typeof child === "string" ? "#" : child.href}
+                    className="block px-5 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#0050A0] transition-colors"
+                  >
+                    {typeof child === "string" ? child : child.label}
+                  </Link>
+                ))}
+              </div>
+            )}
             </div>
           ))}
         </div>
@@ -153,12 +161,12 @@ export default function Navbar() {
                   <div className="pl-4 pb-2 flex flex-col gap-1">
                     {link.children.map((child) => (
                       <Link
-                        key={child.label}
-                        href={child.href}
+                        key={typeof child === "string" ? child : child.label}
+                        href={typeof child === "string" ? "#" : child.href}
                         className="py-2 text-sm text-slate-500 hover:text-[#0050A0] transition-colors"
                         onClick={() => setMobileOpen(false)}
                       >
-                        {child.label}
+                        {typeof child === "string" ? child : child.label}
                       </Link>
                     ))}
                   </div>
