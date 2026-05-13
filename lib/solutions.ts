@@ -62,7 +62,7 @@ export const solutions: Solution[] = [
   {
     slug: "iot",
     title: "IoT Solutions",
-    heroImage: "/images/hero-bg.jpg", // Placeholder
+    heroImage: "/images/iot-solutions.jpg", // Placeholder
     heroDescription: "Connecting the physical and digital worlds with intelligent IoT ecosystems for real-time insights and operational excellence.",
     sections: [
       {
