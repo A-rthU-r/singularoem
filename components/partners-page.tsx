@@ -111,7 +111,7 @@ const defaultPartnerNews: PartnerNews[] = [
   {
     title: "Singular Partners with HPE for Edge Computing",
     description: "Joint initiative to deliver advanced edge computing solutions for manufacturing and utilities.",
-    link: "#",
+    link: "# ",
     image: "/placeholder.jpg",
   },
   {
@@ -136,7 +136,7 @@ export default function PartnersPage({
       <section className="relative w-full h-screen min-h-[600px] max-h-[900px] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/images/hero-bg.jpg"
+            src="/images/partner-hero-bg.jpg"
             alt="Partners"
             className="w-full h-full object-cover object-center"
           />

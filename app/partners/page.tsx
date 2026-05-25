@@ -15,7 +15,7 @@ export default function Page() {
       <main>
         <PartnersPage />
         <div className="fixed bottom-4 right-4">
-          <Btn url="https://codescandy.com/" label="Schedule Meeting" />
+          <Btn url="https://calendly.com/bookings-singular/schedule-a-meeting-with-singular" label="Schedule Meeting" />
         </div>
       </main>
       <Footer />

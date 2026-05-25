@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { ChevronDown, Menu, X, Search } from "lucide-react"
+import { ChevronDown, Menu, X } from "lucide-react"
 
 const NAV_LINKS = [
   {
@@ -28,21 +28,13 @@ const NAV_LINKS = [
       { label: "Healthcare", href: "/industries/healthcare" },
     ],
   },
-  {
-    label: "Insights",
-    href: "#insights",
-    children: null,
-  },
+
   {
     label: "Partners",
     href: "/partners",
     children: null,
   },
-  {
-    label: "About Us",
-    href: "#about",
-    children: null,
-  },
+
   {
     label: "Contact",
     href: "#contact",
@@ -114,17 +106,12 @@ export default function Navbar() {
 
         {/* Right-side utilities */}
         <div className="hidden lg:flex items-center gap-1 ml-4">
-          <button
-            aria-label="Search"
-            className="p-2.5 text-slate-600 hover:text-[#0050A0] transition-colors"
-          >
-            <Search size={18} />
-          </button>
 
-          <div className="w-px h-5 bg-slate-200 mx-1" />
+
+
 
           <a
-            href="https://share-eu1.hsforms.com/1fZx1K1zdS-iMJJclshb99w2ewkpq"
+            href="https://form.typeform.com/to/BwHCXFdK"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-1 px-5 py-2 text-sm font-semibold text-white bg-[#0050A0] hover:bg-[#003d80] transition-colors"
@@ -155,7 +142,7 @@ export default function Navbar() {
                   onClick={() => !link.children && setMobileOpen(false)}
                 >
                   {link.label}
-                  {link.children && <ChevronDown size={14} className="text-slate-400" />}
+                  {link.children && link.label !== "Insights" && <ChevronDown size={14} className="text-slate-400" />}
                 </Link>
                 {link.children && (
                   <div className="pl-4 pb-2 flex flex-col gap-1">
@@ -176,7 +163,7 @@ export default function Navbar() {
 
             <div className="pt-4">
               <a
-                href="https://share-eu1.hsforms.com/1fZx1K1zdS-iMJJclshb99w2ewkpq"
+                href="https://form.typeform.com/to/BwHCXFdK"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center px-5 py-3 text-sm font-semibold text-white bg-[#0050A0] hover:bg-[#003d80] transition-colors"

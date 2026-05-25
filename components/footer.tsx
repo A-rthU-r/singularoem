@@ -61,44 +61,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Company */}
-          <div>
-            <h3 className="text-white font-semibold text-xs mb-5 tracking-widest uppercase">Company</h3>
-            <ul className="space-y-3 text-sm">
-              {[
-                ["About Us", "#about"],
-                ["Leadership", "#"],
-                ["Newsroom", "#"],
-                ["Sustainability", "#"],
-                ["Careers", "#"],
-                ["Contact Us", "https://share-eu1.hsforms.com/1fZx1K1zdS-iMJJclshb99w2ewkpq"],
-              ].map(([label, href]) => (
-                <li key={label}>
-                  <Link href={href} className="hover:text-white transition-colors">{label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Partnerships */}
-          <div>
-            <h3 className="text-white font-semibold text-xs mb-5 tracking-widest uppercase">Partnerships</h3>
-            <ul className="space-y-3 text-sm">
-              {[
-                ["Become a Partner", "https://share-eu1.hsforms.com/1fZx1K1zdS-iMJJclshb99w2ewkpq"],
-                ["Channel Partners", "#"],
-                ["Technology Alliances", "#"],
-                ["OEM Partners", "#"],
-                ["System Integrators", "#"],
-                ["Partner Portal", "#"],
-              ].map(([label, href]) => (
-                <li key={label}>
-                  <Link href={href} className="hover:text-white transition-colors">{label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Contact */}
           <div>
             <h3 className="text-white font-semibold text-xs mb-5 tracking-widest uppercase">Get In Touch</h3>
@@ -116,7 +78,7 @@ export default function Footer() {
               </li>
               <li className="pt-2">
                 <a
-                  href="https://share-eu1.hsforms.com/1fZx1K1zdS-iMJJclshb99w2ewkpq"
+                  href="https://form.typeform.com/to/BwHCXFdK"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-[#4da6ff] hover:text-white transition-colors font-medium"
