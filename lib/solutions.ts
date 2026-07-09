@@ -273,7 +273,7 @@ solutions.push({
       type: "two-column-text",
       heading: "Faster Insights, Greater Efficiency",
       content: "By moving computation to the edge, you can minimize the reliance on centralized cloud infrastructure, leading to significant improvements in operational efficiency and data security. Our solutions are designed to integrate seamlessly with your existing IoT devices and cloud platforms, providing a robust and scalable edge infrastructure.\n\nWhether you're looking to optimize factory floors, manage smart cities, or deploy intelligent retail environments, Singular's Edge Computing expertise delivers the performance and reliability you need to stay ahead.",
-      imageUrl: "/images/edge-computing-solution-example.jpg", // Placeholder
+      imageUrl: "/images/faster-insights.jpg", // Placeholder
       imageLeft: false,
     },
     {
@@ -290,7 +290,7 @@ solutions.push({
       type: "grid-features",
       heading: "Why Singular for Edge Computing?",
       gridFeatures: [
-        { title: "Optimized Performance", description: "Achieve lightning-fast response times for latency-sensitive applications.", image: "/images/feature-performance.jpg" },
+        { title: "Optimized Performance", description: "Achieve lightning-fast response times for latency-sensitive applications.", image: "/images/Optimized-Performance.jpg" },
         { title: "Enhanced Security", description: "Process sensitive data locally, reducing exposure and improving compliance.", image: "/images/feature-security-edge.jpg" },
         { title: "Scalable Infrastructure", description: "Deploy and manage edge resources efficiently across diverse environments.", image: "/images/feature-scalable-edge.jpg" },
       ],

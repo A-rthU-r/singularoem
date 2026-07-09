@@ -41,7 +41,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
           className="text-white/80 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed"
         >
-          Singular is a global technology powerhouse specializing in the orchestration of end-to-end IoT, Private 5G, and AI-driven ecosystems. 
+          Singular is a global technology powerhouse specializing in the orchestration of carrier grade connectivity, end-to-end IoT, Private 5G, and AI-driven ecosystems. 
           We architect the digital infrastructure that scales industries and defines the future of enterprise technology worldwide
         </motion.p>
 

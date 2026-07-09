@@ -114,32 +114,6 @@ export default function PricingSection() {
           </p>
         </motion.div>
 
-        {/* Regulatory & Memberships */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mb-16"
-        >
-          <p className="text-xs font-semibold text-slate-400 tracking-widest uppercase mb-8 text-center">
-            Regulatory Approvals & Memberships
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            {CREDENTIALS.map((cert, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-3 border border-slate-200 px-6 py-4 bg-white hover:border-[#0050A0] transition-colors"
-              >
-                <div className="w-2 h-2 rounded-full bg-[#0050A0] flex-shrink-0" />
-                <div>
-                  <p className="text-sm font-bold text-slate-800">{cert.label}</p>
-                  <p className="text-xs text-slate-400">{cert.sub}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
 
       </div>
     </section>
